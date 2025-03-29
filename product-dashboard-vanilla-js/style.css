@@ -1,0 +1,39 @@
+#product-container { 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; 
+    padding: 40px;
+    max-width: 1200px; 
+    margin: 0 auto;
+    position: center;
+}
+
+.product-card { 
+    background-color: #1E1E1E;
+    border-radius: 16px;
+    margin: 15px;
+    padding: 40px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-name { 
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #EDEDED;
+    margin-bottom: 10px;
+  }
+
+  .product-price { 
+    font-size: 1.2rem;
+    color: #F1C40F;
+    margin-bottom: 20px;
+  }
+  
+  .product-image { 
+    max-width: 100%;
+    max-height: 250px;
+    height: auto;
+    border-radius: 8px;
+  }
