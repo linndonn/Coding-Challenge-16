@@ -21,3 +21,7 @@ function fetchProductsThen() {
             console.error('A problem occured while fetching:', error); 
         });
     }
+
+    //Task 3: Fetch Products with async/await
+
+    
