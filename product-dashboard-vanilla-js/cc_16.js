@@ -78,3 +78,11 @@ function displayProducts(products) {
         productContainer.appendChild(productCard); // appends the product container
     })
 }
+
+//Task 5: Reusable Error Handler
+// Create a function handleError(error) that: Logs "An error occurred: " followed by the error message.
+
+function handleError(error) {
+    const errorMessage = document.getElementById('error-message');
+    errorMessage.textContent = `An error occurred: ${error.message}`;
+}
