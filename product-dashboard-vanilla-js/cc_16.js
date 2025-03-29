@@ -49,3 +49,32 @@ function displayProducts(products) {
         productElement.textContent = `${product.fields.name} - $${product.fields.price}`;  
     });
 }
+
+
+//Task 4: Display the Products
+//Write a function displayProducts(products) that selects #product-container.
+function displayProducts(products) {
+    const productContainer = document.getElementById("product-container");
+     // Display only the first 5 products
+    const productList = products.slice(0,5);
+// Create a product card for each product
+    productList.forEach(product => {
+        const productCard = document.createElement('div') 
+        productCard.className = 'product-card';
+//Creates HTML elements to show each product’s name
+        const name = document.createElement('h3'); 
+        name.textContent = product.fields.name; 
+        name.className = 'product-name'
+//Creates HTML elements to show each product’s price
+        const price = document.createElement('p'); 
+        price.textContent = `$${product.fields.price}`; 
+        price.className = 'product-price'; 
+//Creates HTML elements to show each product’s image
+        image.src = product.fields.image[0].url;
+        image.alt = product.fields.name;
+        image.className = 'product-image';
+//Appends them to the container.
+        productCard.append(name, price, image);  // appends the elements of the product card
+        productContainer.appendChild(productCard); // appends the product container
+    })
+}
