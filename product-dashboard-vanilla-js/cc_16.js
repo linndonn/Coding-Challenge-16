@@ -86,3 +86,8 @@ function handleError(error) {
     const errorMessage = document.getElementById('error-message');
     errorMessage.textContent = `An error occurred: ${error.message}`;
 }
+
+//Task 6: Call Your Fetch Functions
+//At the bottom of your cc_16.js, call:
+fetchProductsThen();
+fetchProductsAsync();
