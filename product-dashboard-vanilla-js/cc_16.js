@@ -3,7 +3,7 @@
 
 function fetchProductsThen() {
     // This function fetches product data from a given API.
-    return fetch('https://www.course-api.com/javascript-store-products')
+     fetch('https://www.course-api.com/javascript-store-products')
         .then(response => {
             if (!response.ok) {
                 // If the response is not right, produce an error
@@ -54,7 +54,7 @@ function displayProducts(products) {
 //Task 4: Display the Products
 //Write a function displayProducts(products) that selects #product-container.
 function displayProducts(products) {
-    const productContainer = document.getElementById("product-container");
+    const productContainer = document.querySelector('#product-container');
      // Display only the first 5 products
     const productList = products.slice(0,5);
 // Create a product card for each product
@@ -70,6 +70,7 @@ function displayProducts(products) {
         price.textContent = `$${product.fields.price}`; 
         price.className = 'product-price'; 
 //Creates HTML elements to show each product’s image
+        const image = document.createElement('img');
         image.src = product.fields.image[0].url;
         image.alt = product.fields.name;
         image.className = 'product-image';
@@ -84,7 +85,7 @@ function displayProducts(products) {
 
 function handleError(error) {
     const errorMessage = document.getElementById('error-message');
-    errorMessage.textContent = `An error occurred: ${error.message}`;
+    errorMessage.textContent = `An error has occurred: ${error.message}`;
 }
 
 //Task 6: Call Your Fetch Functions
